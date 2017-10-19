@@ -87,6 +87,10 @@ LazyLoader.prototype.load = function() {
   this.img.src = this.img.getAttribute('data-flickity-lazyload');
   // remove attr
   this.img.removeAttribute('data-flickity-lazyload');
+  // load srcset
+  this.img.src = this.img.getAttribute('data-flickity-lazyload-srcset');
+  // remove srcset data attr
+  this.img.removeAttribute('data-flickity-lazyload-srcset');
 };
 
 LazyLoader.prototype.onload = function( event ) {
